@@ -1,0 +1,28 @@
+{
+  "name": "use-track-renders",
+  "version": "1.0.0",
+  "description": "",
+  "main": "use-track-renders.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ionuts94/use-track-renders.git"
+  },
+  "keywords": [
+    "track",
+    "react",
+    "renders"
+  ],
+  "author": "ionut",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ionuts94/use-track-renders/issues"
+  },
+  "homepage": "https://github.com/ionuts94/use-track-renders#readme",
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

@@ -1,6 +1,6 @@
 {
-  "name": "trak-renders",
-  "version": "0.1.0",
+  "name": "use-track-renders",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
@@ -34,5 +34,23 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ionuts94/use-track-renders.git"
+  },
+  "keywords": [
+    "track",
+    "react",
+    "renders"
+  ],
+  "author": "Ionut Sandu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ionuts94/use-track-renders/issues"
+  },
+  "homepage": "https://github.com/ionuts94/use-track-renders#readme"
 }

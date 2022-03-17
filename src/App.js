@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import useTrackRenders from './hooks/use-track-renders';
 
 function App() {
+  const [firstStateVar, setFirstStateVar] = useState(false);
+  const [secondStateVar, setSecondStateVar] = useState(0);
+  const [thirdStateVar, setThirdStateVar] = useState({
+    name: "John"
+  });
+
+  useTrackRenders([firstStateVar, secondStateVar, thirdStateVar], "App")
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>
+        first state var: {firstStateVar}
+      </h1>
+      <h1>
+        second state var: {secondStateVar}
+      </h1>
+      <h1>
+        third state var: {thirdStateVar.name}
+      </h1>
+
+      <button onClick={() => setFirstStateVar(!firstStateVar)}>
+        toggle first var
+      </button>
+      <button onClick={() => setSecondStateVar(secondStateVar => secondStateVar+1)}>
+        increase second var
+      </button>
+      <button onClick={() => setThirdStateVar(thirdStateVar => { return { name: thirdStateVar.name + "n"}})}>
+        change third var name
+      </button>
     </div>
   );
 }
