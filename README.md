@@ -6,10 +6,14 @@ The way this work is we pass variables in our component we want to listen for ch
 ## Usage
 
 Firstly you will need to import the hook in the component you plan to track renders:
-    eg: import useTrackRenders from 'use-track-renders'
+```
+eg: import useTrackRenders from 'use-track-renders'
+```
 
 Secondly you will need to call the hook. It accepts 2 arguments. First argument is an array which contains props and state variables and the second argument which is a string and represents the name of the component. It returns a string if it was successfully mounted.
-    eg: const mountedTrackRenders = useTrackRenders([stateVar1, stateVar2, props], "component name");
+```
+eg: const mountedTrackRenders = useTrackRenders([stateVar1, stateVar2, props], "component name");
+```
 
 ## Usage example
 

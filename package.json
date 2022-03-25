@@ -1,6 +1,6 @@
 {
   "name": "use-track-renders",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
