@@ -14,7 +14,7 @@ Secondly you will need to call the hook. It accepts 2 arguments. First argument 
 ## Usage example
 
 We have following component:
-
+```
 import { useState } from 'react';
 import useTrackRenders from 'use-track-renders';
 
@@ -36,9 +36,11 @@ export const Counter = ({ initCount }) => {
         </div>
     )
 }
+```
 
 If we press the button to increase the counter we will be told in the console that our state[1] variable changed, which is 'counter' variable. Also state[2] changed becase 'counter' changes triggered a component re-render so our 'increaseCounter' function is a new function after re-render. We could improve the performance by memoizing the function with useCallback hook so our new component would look like: 
 
+```
 import { useState, useCallback } from 'react';
 import useTrackRenders from 'use-track-renders';
 
@@ -61,6 +63,7 @@ export const Counter = ({ initCount }) => {
         </div>
     )
 }
+```
 
 This was a case where we used useTrackRenders to improve performance a component's performance.
 It can also be used to track unwanted re-renders.
