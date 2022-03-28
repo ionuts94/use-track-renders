@@ -42,33 +42,3 @@ export const Counter = ({ initCount }) => {
 }
 ```
 
-If we press the button to increase the counter we will be told in the console that our state[1] variable changed, which is 'counter' variable. Also state[2] changed becase 'counter' changes triggered a component re-render so our 'increaseCounter' function is a new function after re-render. We could improve the performance by memoizing the function with useCallback hook so our new component would look like: 
-
-```
-import { useState, useCallback } from 'react';
-import useTrackRenders from 'use-track-renders';
-
-export const Counter = ({ initCount }) => {
-    const [counter, setCounter] = useState(initCount);
-
-    const increaseCounter = useCallback(() => {
-        setCounter(counter => counter + 1);
-    }, [])
-
-    const mountedTrackRenders = useTrackRenders(
-        [initCount, counter, increaseCounter], // Variables we want to track changes
-        'Counter' // Component name
-    )
-
-    return (
-        <div>
-            <h1>Counter: {counter}</h1>
-            <button onClick={increaseCounter}>Increase count</button>
-        </div>
-    )
-}
-```
-
-This was a case where we used useTrackRenders to improve performance a component's performance.
-It can also be used to track unwanted re-renders.
-
